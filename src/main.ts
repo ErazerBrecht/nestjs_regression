@@ -5,7 +5,7 @@ import * as fs from 'fs';
 
 
 async function bootstrap() {
-  const config = JSON.parse(fs.readFileSync(join(__dirname, 'appsettings.json'), 'utf8'));
+  const config = JSON.parse(fs.readFileSync(join(__dirname, 'settings.json'), 'utf8'));
   console.log(config.motd);
   const app = await NestFactory.create(AppModule);
   await app.listen(3000);
